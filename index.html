@@ -409,8 +409,8 @@
       }
 
       .member-img-wrapper {
-        width: 210px;
-        height: 290px;
+        width: 185px;
+        height: 250px;
         flex-shrink: 0;
         border-radius: 0.85rem;
         overflow: visible;
@@ -430,13 +430,13 @@
       }
       
       @media (min-width: 640px) {
-        .member-img-wrapper { width: 240px; height: 330px; }
+        .member-img-wrapper { width: 210px; height: 290px; }
       }
       @media (min-width: 1024px) {
-        .member-img-wrapper { width: 280px; height: 380px; }
+        .member-img-wrapper { width: 240px; height: 330px; }
       }
 
-      /* ---------- MESSAGE BOX TOOLTIP (TOP HOVER) ---------- */
+      /* ---------- MESSAGE BOX TOOLTIP (TOP HOVER & CLICK/TAP) ---------- */
       .bio-tooltip {
         position: absolute;
         top: -12px;
@@ -468,7 +468,8 @@
         border-radius: 2px;
       }
       .member-img-wrapper:hover .bio-tooltip,
-      .member-img-wrapper:active .bio-tooltip {
+      .member-img-wrapper:active .bio-tooltip,
+      .member-img-wrapper.active .bio-tooltip {
         opacity: 1;
         visibility: visible;
         transform: translateX(-50%) translateY(calc(-100% - 8px));
@@ -587,7 +588,7 @@
         <!-- SLIDE 0: Founder (Santhosh S) -->
         <div id="slide-0" class="slide-card">
           <div class="team-card-inner">
-            <div class="member-img-wrapper !w-[220px] sm:!w-[300px] lg:!w-[420px] !h-[310px] sm:!h-[420px] lg:!h-[580px] group cursor-pointer">
+            <div class="member-img-wrapper !w-[220px] sm:!w-[300px] lg:!w-[380px] !h-[310px] sm:!h-[420px] lg:!h-[520px] group cursor-pointer">
               <img alt="Founder sitting on a chair" class="w-full h-full object-contain object-bottom drop-shadow-xl" src="https://i.postimg.cc/QC2zsBdh/Founder-3x-3x.png"/>
               <div class="bio-tooltip">Never settles for average</div>
             </div>
@@ -610,7 +611,7 @@
           <div class="team-card-inner">
             <div class="flex gap-6 items-center">
               <div class="flex flex-col items-center">
-                <div class="member-img-wrapper !w-[165px] sm:!w-[235px] lg:!w-[290px] !h-[225px] sm:!h-[320px] lg:!h-[395px] group cursor-pointer">
+                <div class="member-img-wrapper !w-[155px] sm:!w-[210px] lg:!w-[250px] !h-[210px] sm:!h-[285px] lg:!h-[340px] group cursor-pointer">
                   <img src="https://imgh.in/host/2ofkn1" alt="Rohith Susan" class="w-full h-full object-contain object-bottom"/>
                   <div class="bio-tooltip">I speak fluent deadlines, period.</div>
                 </div>
@@ -618,7 +619,7 @@
                 <p class="gradient-text text-[8px] sm:text-xs uppercase tracking-wider font-semibold">Project Manager</p>
               </div>
               <div class="flex flex-col items-center">
-                <div class="member-img-wrapper !w-[165px] sm:!w-[235px] lg:!w-[290px] !h-[225px] sm:!h-[320px] lg:!h-[395px] group cursor-pointer">
+                <div class="member-img-wrapper !w-[155px] sm:!w-[210px] lg:!w-[250px] !h-[210px] sm:!h-[285px] lg:!h-[340px] group cursor-pointer">
                   <img src="https://imgh.in/host/fc8q57" alt="Hirthik" class="w-full h-full object-contain object-bottom"/>
                   <div class="bio-tooltip">Scrolling is technically part of the job</div>
                 </div>
@@ -642,14 +643,14 @@
           </div>
         </div>
 
-        <!-- SLIDE 2: Creative & Video Editing Team (5 members layout with fixed top padding so faces are never cut off) -->
+        <!-- SLIDE 2: Creative & Video Editing Team (5 members layout: Kasi, Gowshik, Madhan, Gopi, Taufia) -->
         <div id="slide-2" class="slide-card">
           <div class="team-card-inner !flex-col lg:!flex-row !justify-center lg:!justify-between !max-w-7xl !w-full !px-4 lg:!px-8 gap-8 lg:gap-4">
-            <!-- Staggered Grid of 5 Members (Desktop/Tablet Layout) -->
+            <!-- Staggered Grid of 5 Members (Desktop/Tablet Layout with slightly smaller image sizing so upper faces are fully visible) -->
             <div class="relative w-full max-w-[700px] h-[580px] sm:h-[640px] lg:h-[700px] pt-12 sm:pt-16 hidden sm:block shrink-0 mx-auto">
               <!-- 1. Kasi (Top Left) -->
-              <div class="absolute top-0 left-[-75px] sm:left-[-95px] flex flex-col items-center w-[170px] sm:w-[200px] lg:w-[230px]">
-                <div class="member-img-wrapper !w-[170px] sm:!w-[200px] lg:!w-[230px] !h-[210px] sm:!h-[250px] lg:!h-[290px] group cursor-pointer">
+              <div class="absolute top-0 left-[-75px] sm:left-[-95px] flex flex-col items-center w-[150px] sm:w-[175px] lg:w-[200px]">
+                <div class="member-img-wrapper !w-[150px] sm:!w-[175px] lg:!w-[200px] !h-[190px] sm:!h-[220px] lg:!h-[250px] group cursor-pointer">
                   <img src="https://imgh.in/host/h3j4vy" alt="Kasi" class="object-contain object-bottom" />
                   <div class="bio-tooltip">Professionally allergic to unnecessary cuts & changes.</div>
                 </div>
@@ -658,8 +659,8 @@
               </div>
 
               <!-- 2. Gowshik Kumar (Center Position) -->
-              <div class="absolute top-[150px] sm:top-[180px] lg:top-[210px] left-[140px] sm:left-[175px] lg:left-[210px] flex flex-col items-center w-[215px] sm:w-[245px] lg:w-[285px] z-10">
-                <div class="member-img-wrapper !w-[215px] sm:!w-[245px] lg:!w-[285px] !h-[260px] sm:!h-[300px] lg:!h-[345px] group cursor-pointer">
+              <div class="absolute top-[130px] sm:top-[150px] lg:top-[170px] left-[130px] sm:left-[160px] lg:left-[190px] flex flex-col items-center w-[170px] sm:w-[195px] lg:w-[225px] z-10">
+                <div class="member-img-wrapper !w-[170px] sm:!w-[195px] lg:!w-[225px] !h-[210px] sm:!h-[240px] lg:!h-[280px] group cursor-pointer">
                   <img src="https://imgh.in/host/m6zaa5" alt="Gowshik Kumar" class="object-contain object-bottom" />
                   <div class="bio-tooltip">Guarding the brand holy book</div>
                 </div>
@@ -668,8 +669,8 @@
               </div>
 
               <!-- 3. Madhan Kumar (Top Right) -->
-              <div class="absolute top-0 left-[390px] sm:left-[470px] lg:left-[550px] flex flex-col items-center w-[170px] sm:w-[200px] lg:w-[230px]">
-                <div class="member-img-wrapper !w-[170px] sm:!w-[200px] lg:!w-[230px] !h-[210px] sm:!h-[250px] lg:!h-[290px] group cursor-pointer">
+              <div class="absolute top-0 left-[350px] sm:left-[420px] lg:left-[490px] flex flex-col items-center w-[150px] sm:w-[175px] lg:w-[200px]">
+                <div class="member-img-wrapper !w-[150px] sm:!w-[175px] lg:!w-[200px] !h-[190px] sm:!h-[220px] lg:!h-[250px] group cursor-pointer">
                   <img src="https://imgh.in/host/kr4pbs" alt="Madhan Kumar" class="object-contain object-bottom" />
                   <div class="bio-tooltip">Stay silent until the design is done.</div>
                 </div>
@@ -678,8 +679,8 @@
               </div>
 
               <!-- 4. Gopi (Bottom Left) -->
-              <div class="absolute top-[280px] sm:top-[320px] lg:top-[360px] left-[-75px] sm:left-[-95px] flex flex-col items-center w-[170px] sm:w-[200px] lg:w-[230px]">
-                <div class="member-img-wrapper !w-[170px] sm:!w-[200px] lg:!w-[230px] !h-[210px] sm:!h-[250px] lg:!h-[290px] group cursor-pointer">
+              <div class="absolute top-[260px] sm:top-[300px] lg:top-[340px] left-[-75px] sm:left-[-95px] flex flex-col items-center w-[150px] sm:w-[175px] lg:w-[200px]">
+                <div class="member-img-wrapper !w-[150px] sm:!w-[175px] lg:!w-[200px] !h-[190px] sm:!h-[220px] lg:!h-[250px] group cursor-pointer">
                   <img src="https://imgh.in/host/hjk4ok" alt="Gopi" class="object-contain object-bottom" />
                   <div class="bio-tooltip">Somewhere between silence and editing life choices</div>
                 </div>
@@ -688,8 +689,8 @@
               </div>
 
               <!-- 5. Taufia Zayan (Bottom Right Position) -->
-              <div class="absolute top-[280px] sm:top-[320px] lg:top-[360px] left-[390px] sm:left-[470px] lg:left-[550px] flex flex-col items-center w-[170px] sm:w-[200px] lg:w-[230px]">
-                <div class="member-img-wrapper !w-[170px] sm:!w-[200px] lg:!w-[230px] !h-[210px] sm:!h-[250px] lg:!h-[290px] group cursor-pointer">
+              <div class="absolute top-[260px] sm:top-[300px] lg:top-[340px] left-[350px] sm:left-[420px] lg:left-[490px] flex flex-col items-center w-[150px] sm:w-[175px] lg:w-[200px]">
+                <div class="member-img-wrapper !w-[150px] sm:!w-[175px] lg:!w-[200px] !h-[190px] sm:!h-[220px] lg:!h-[250px] group cursor-pointer">
                   <img src="https://imgh.in/host/s2wmv0" alt="Taufia Zayan" class="object-contain object-bottom" />
                   <div class="bio-tooltip">Somehow still calm after the fifth revision.</div>
                 </div>
@@ -698,10 +699,10 @@
               </div>
             </div>
 
-            <!-- Mobile fallback grid -->
+            <!-- Mobile fallback grid including Madhan Kumar -->
             <div class="grid grid-cols-2 gap-3 sm:hidden w-full max-w-sm mx-auto">
               <div class="flex flex-col items-center">
-                <div class="member-img-wrapper !w-[130px] !h-[175px] group cursor-pointer">
+                <div class="member-img-wrapper !w-[120px] !h-[160px] group cursor-pointer">
                   <img src="https://imgh.in/host/h3j4vy" alt="Kasi" class="object-contain object-bottom" />
                   <div class="bio-tooltip">Professionally allergic to unnecessary cuts & changes.</div>
                 </div>
@@ -709,7 +710,7 @@
                 <p class="gradient-text text-[8px] uppercase font-semibold text-center">HEAD OF VIDEO EDITING</p>
               </div>
               <div class="flex flex-col items-center">
-                <div class="member-img-wrapper !w-[145px] !h-[195px] group cursor-pointer">
+                <div class="member-img-wrapper !w-[130px] !h-[175px] group cursor-pointer">
                   <img src="https://imgh.in/host/m6zaa5" alt="Gowshik Kumar" class="object-contain object-bottom" />
                   <div class="bio-tooltip">Guarding the brand holy book</div>
                 </div>
@@ -717,15 +718,23 @@
                 <p class="gradient-text text-[8px] uppercase font-semibold text-center">BRAND MANAGER</p>
               </div>
               <div class="flex flex-col items-center">
-                <div class="member-img-wrapper !w-[130px] !h-[175px] group cursor-pointer">
+                <div class="member-img-wrapper !w-[120px] !h-[160px] group cursor-pointer">
+                  <img src="https://imgh.in/host/kr4pbs" alt="Madhan Kumar" class="object-contain object-bottom" />
+                  <div class="bio-tooltip">Stay silent until the design is done.</div>
+                </div>
+                <h3 class="text-xs font-bold text-gray-900 mt-1 text-center">Madhan Kumar</h3>
+                <p class="gradient-text text-[8px] uppercase font-semibold text-center">GRAPHICS DESIGNER</p>
+              </div>
+              <div class="flex flex-col items-center">
+                <div class="member-img-wrapper !w-[120px] !h-[160px] group cursor-pointer">
                   <img src="https://imgh.in/host/hjk4ok" alt="Gopi" class="object-contain object-bottom" />
                   <div class="bio-tooltip">Somewhere between silence and editing life choices</div>
                 </div>
                 <h3 class="text-xs font-bold text-gray-900 mt-1 text-center">Gopi</h3>
                 <p class="gradient-text text-[8px] uppercase font-semibold text-center">VIDEO EDITOR 1</p>
               </div>
-              <div class="flex flex-col items-center">
-                <div class="member-img-wrapper !w-[130px] !h-[175px] group cursor-pointer">
+              <div class="flex flex-col items-center col-span-2">
+                <div class="member-img-wrapper !w-[120px] !h-[160px] group cursor-pointer">
                   <img src="https://imgh.in/host/s2wmv0" alt="Taufia Zayan" class="object-contain object-bottom" />
                   <div class="bio-tooltip">Somehow still calm after the fifth revision.</div>
                 </div>
@@ -761,7 +770,7 @@
           <div class="team-card-inner">
             <div class="flex gap-6 items-center">
               <div class="flex flex-col items-center">
-                <div class="member-img-wrapper !w-[185px] sm:!w-[260px] lg:!w-[320px] !h-[250px] sm:!h-[355px] lg:!h-[440px] group cursor-pointer">
+                <div class="member-img-wrapper !w-[155px] sm:!w-[210px] lg:!w-[250px] !h-[210px] sm:!h-[285px] lg:!h-[340px] group cursor-pointer">
                   <img src="https://imgh.in/host/es4vng" alt="Karthi Deivam" class="w-full h-full object-contain object-bottom"/>
                   <div class="bio-tooltip">For us, “what if” means “let’s actually do it.”</div>
                 </div>
@@ -769,7 +778,7 @@
                 <p class="gradient-text text-[8px] sm:text-xs uppercase tracking-wider font-semibold">Creative Director</p>
               </div>
               <div class="flex flex-col items-center">
-                <div class="member-img-wrapper !w-[185px] sm:!w-[260px] lg:!w-[320px] !h-[250px] sm:!h-[355px] lg:!h-[440px] group cursor-pointer">
+                <div class="member-img-wrapper !w-[155px] sm:!w-[210px] lg:!w-[250px] !h-[210px] sm:!h-[285px] lg:!h-[340px] group cursor-pointer">
                   <img src="https://imgh.in/host/otbbgt" alt="Suriya" class="w-full h-full object-contain object-bottom"/>
                   <div class="bio-tooltip">For us, “what if” means “let’s actually do it.”</div>
                 </div>
@@ -1090,6 +1099,18 @@
         show(0);
         window.addEventListener('scroll', onScroll, { passive: true });
       }
+
+      // ---------- TOOLTIP CLICK / TAP TOGGLE (FOR MOBILE & DESKTOP) ----------
+      document.addEventListener('click', (e) => {
+        const wrappers = document.querySelectorAll('.member-img-wrapper');
+        wrappers.forEach(w => {
+          if (w.contains(e.target)) {
+            w.classList.toggle('active');
+          } else {
+            w.classList.remove('active');
+          }
+        });
+      });
 
       // ---------- NAVIGATION & LOGO MORPHING ----------
       let isNavExpanded = false;
