@@ -221,12 +221,12 @@
     .heading-2lines .line1 { display: block; font-weight: 700; color: #000000; }
     .heading-2lines .line2 { display: block; font-weight: 600; color: #000000; }
 
-    .card-scroll-container { height: clamp(420px, 60vh, 640px); }
-    @media (max-width: 1024px) {
-      .card-scroll-container { height: 380px; margin-top: 16px; }
+    .card-scroll-container { height: 400px; min-height: 400px; }
+    @media (min-width: 768px) {
+      .card-scroll-container { height: 500px; }
     }
-    @media (max-width: 640px) {
-      .card-scroll-container { height: 320px; }
+    @media (min-width: 1024px) {
+      .card-scroll-container { height: 600px; }
     }
     
     .card-img {
@@ -240,9 +240,9 @@
     }
     .card-img:hover { transform: scale(1.02); }
 
-    .grad-overlay-top { background: linear-gradient(to bottom, #ffffff 0%, rgba(255,255,255,0.92) 50%, transparent 100%); height: 110px; }
-    .grad-overlay-bottom { background: linear-gradient(to top, #ffffff 0%, rgba(255,255,255,0.92) 50%, transparent 100%); height: 110px; }
-    @media (min-width: 768px) { .grad-overlay-top, .grad-overlay-bottom { height: 150px; } }
+    .grad-overlay-top { background: linear-gradient(to bottom, #ffffff 0%, rgba(255,255,255,0.92) 50%, transparent 100%); height: 90px; }
+    .grad-overlay-bottom { background: linear-gradient(to top, #ffffff 0%, rgba(255,255,255,0.92) 50%, transparent 100%); height: 90px; }
+    @media (min-width: 768px) { .grad-overlay-top, .grad-overlay-bottom { height: 130px; } }
 
     /* ===== FEATURED WORK ===== */
     .featured-section { background-color: #000000; padding: clamp(80px, 10vw, 150px) var(--gutter); overflow: hidden; }
@@ -471,39 +471,39 @@
       <div class="absolute top-0 left-0 w-full scrolling-content flex flex-col" id="scrolling-visual-track">
         <!-- SET 1 -->
         <div class="flex flex-col gap-3 pb-3 w-full shrink-0">
-          <!-- Wide Banner 1: ivo57d (914x188 px ratio) -->
-          <div class="card-img w-full shrink-0" style="background-image: url('https://imgh.in/host/ivo57d'); aspect-ratio: 914 / 188;"></div>
+          <!-- Wide Banner 1: ivo57d -->
+          <div class="card-img w-full h-24 sm:h-36 md:h-44 shrink-0" style="background-image: url('https://imgh.in/host/ivo57d');"></div>
           
           <div class="grid grid-cols-2 gap-3 w-full">
-            <div class="card-img w-full h-28 sm:h-48 md:h-56 shrink-0" style="background-image: url('https://imgh.in/host/ffmba3');"></div>
-            <div class="card-img w-full h-28 sm:h-48 md:h-56 shrink-0" style="background-image: url('https://imgh.in/host/5rms66');"></div>
+            <div class="card-img w-full h-32 sm:h-48 md:h-56 shrink-0" style="background-image: url('https://imgh.in/host/ffmba3');"></div>
+            <div class="card-img w-full h-32 sm:h-48 md:h-56 shrink-0" style="background-image: url('https://imgh.in/host/5rms66');"></div>
           </div>
 
-          <!-- Wide Banner 2: Colour Crafts - 6s09be (914x188 px ratio) -->
-          <div class="card-img w-full shrink-0" style="background-image: url('https://imgh.in/host/6s09be'); aspect-ratio: 914 / 188;"></div>
+          <!-- Wide Banner 2: Colour Crafts - 6s09be -->
+          <div class="card-img w-full h-24 sm:h-36 md:h-44 shrink-0" style="background-image: url('https://imgh.in/host/6s09be');"></div>
 
           <div class="grid grid-cols-2 gap-3 w-full">
-            <div class="card-img w-full h-28 sm:h-48 md:h-56 shrink-0" style="background-image: url('https://imgh.in/host/vaqwnl');"></div>
-            <div class="card-img w-full h-28 sm:h-48 md:h-56 shrink-0" style="background-image: url('https://imgh.in/host/ffmba3');"></div>
+            <div class="card-img w-full h-32 sm:h-48 md:h-56 shrink-0" style="background-image: url('https://imgh.in/host/vaqwnl');"></div>
+            <div class="card-img w-full h-32 sm:h-48 md:h-56 shrink-0" style="background-image: url('https://imgh.in/host/ffmba3');"></div>
           </div>
         </div>
 
         <!-- SET 2 (Loop) -->
         <div class="flex flex-col gap-3 pb-3 w-full shrink-0" aria-hidden="true">
-          <!-- Wide Banner 1: ivo57d (914x188 px ratio) -->
-          <div class="card-img w-full shrink-0" style="background-image: url('https://imgh.in/host/ivo57d'); aspect-ratio: 914 / 188;"></div>
+          <!-- Wide Banner 1: ivo57d -->
+          <div class="card-img w-full h-24 sm:h-36 md:h-44 shrink-0" style="background-image: url('https://imgh.in/host/ivo57d');"></div>
           
           <div class="grid grid-cols-2 gap-3 w-full">
-            <div class="card-img w-full h-28 sm:h-48 md:h-56 shrink-0" style="background-image: url('https://imgh.in/host/ffmba3');"></div>
-            <div class="card-img w-full h-28 sm:h-48 md:h-56 shrink-0" style="background-image: url('https://imgh.in/host/5rms66');"></div>
+            <div class="card-img w-full h-32 sm:h-48 md:h-56 shrink-0" style="background-image: url('https://imgh.in/host/ffmba3');"></div>
+            <div class="card-img w-full h-32 sm:h-48 md:h-56 shrink-0" style="background-image: url('https://imgh.in/host/5rms66');"></div>
           </div>
 
-          <!-- Wide Banner 2: Colour Crafts - 6s09be (914x188 px ratio) -->
-          <div class="card-img w-full shrink-0" style="background-image: url('https://imgh.in/host/6s09be'); aspect-ratio: 914 / 188;"></div>
+          <!-- Wide Banner 2: Colour Crafts - 6s09be -->
+          <div class="card-img w-full h-24 sm:h-36 md:h-44 shrink-0" style="background-image: url('https://imgh.in/host/6s09be');"></div>
 
           <div class="grid grid-cols-2 gap-3 w-full">
-            <div class="card-img w-full h-28 sm:h-48 md:h-56 shrink-0" style="background-image: url('https://imgh.in/host/vaqwnl');"></div>
-            <div class="card-img w-full h-28 sm:h-48 md:h-56 shrink-0" style="background-image: url('https://imgh.in/host/ffmba3');"></div>
+            <div class="card-img w-full h-32 sm:h-48 md:h-56 shrink-0" style="background-image: url('https://imgh.in/host/vaqwnl');"></div>
+            <div class="card-img w-full h-32 sm:h-48 md:h-56 shrink-0" style="background-image: url('https://imgh.in/host/ffmba3');"></div>
           </div>
         </div>
       </div>
@@ -781,13 +781,12 @@
       </div>
       <hr class="border-t border-white/20 w-full mt-2 sm:mt-4 mb-4 sm:mb-6" />
      
-                <div class="flex-grow flex flex-col items-center justify-center text-center w-full pb-4 sm:pb-8 overflow-x-auto scrollbar-hide">
-                    <h1 class="hero-line text-lg sm:text-xl md:text-3xl lg:text-4xl xl:text-[3.2rem] tracking-tight whitespace-nowrap">
-                        <span class="hero-sans text-white">Where Business Thinking&nbsp;</span>
-                        <span style="font-family: 'Playfair Display', serif; font-style: italic; font-weight: 500; letter-spacing: -0.02em; color: #fff;">Becomes Brand expression</span>
-                    </h1>
-                </div>
-            </div>
+      <div class="flex-grow flex flex-col items-center justify-center text-center w-full pb-4 sm:pb-8 overflow-x-auto scrollbar-hide">
+          <h1 class="hero-line text-lg sm:text-xl md:text-3xl lg:text-4xl xl:text-[3.2rem] tracking-tight whitespace-nowrap">
+              <span class="hero-sans text-white">Where Business Thinking&nbsp;</span>
+              <span style="font-family: 'Playfair Display', serif; font-style: italic; font-weight: 500; letter-spacing: -0.02em; color: #fff;">Becomes Brand expression</span>
+          </h1>
+      </div>
     </div>
   </footer>
 
