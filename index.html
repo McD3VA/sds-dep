@@ -3,19 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-  <title>AI-Assisted Design: Where It Helps and Where It Hurts Your Brand</title>
+  <title>Why Renewable Energy Companies With Strong Projects Still Look Invisible Online</title>
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <!-- Lucide Icons -->
   <script src="https://unpkg.com/lucide@latest"></script>
-  <!-- FontAwesome for Social Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-  <!-- Google Fonts: Inter & Playfair Display (700 and 700 Italic) -->
+  <!-- FontAwesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Google Fonts (Inter & Playfair Display 700, 700 Italic) & Aeonik Pro -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
-  <!-- Aeonik Pro Font Import -->
-  <link href="https://fonts.cdnfonts.com/css/aeonik" rel="stylesheet" />
+  <link href="https://fonts.cdnfonts.com/css/aeonik-pro" rel="stylesheet">
   
   <script>
     tailwind.config = {
@@ -24,7 +23,7 @@
           fontFamily: {
             sans: ['Inter', 'sans-serif'],
             head: ['"Playfair Display"', 'serif'],
-            aeonik: ['"Aeonik Pro"', 'sans-serif'],
+            subhead: ['"Aeonik Pro"', 'sans-serif'],
           },
           colors: {
             editorial: {
@@ -44,7 +43,7 @@
     }
   </script>
 
-  <!-- ========================================================= EXACT SDS NAVIGATION STYLES ========================================================= -->
+  <!-- ========================================================= EXACT SDS NAVIGATION & FOOTER STYLES ========================================================= -->
   <style>
     .smooth-transition { transition: all 600ms cubic-bezier(0.25, 1, 0.5, 1); }
     .active-dot { transition: all 300ms cubic-bezier(0.34, 1.56, 0.64, 1); }
@@ -57,31 +56,32 @@
     .scrollbar-hide::-webkit-scrollbar { display: none; }
     .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
     #logo-container-wrap { transition: width 500ms cubic-bezier(0.22, 1, 0.36, 1), background-color 400ms ease, border 400ms ease, border-radius 400ms ease, padding 400ms ease; }
-  </style>
 
-  <style>
     body {
       font-feature-settings: "cv02", "cv03", "cv04", "cv11";
       background-color: #ffffff;
     }
-    
-    /* Global Body Text Styling Override */
-    main p:not(blockquote p) {
+
+    /* Global Body Text Style Override */
+    p, 
+    .body-desc {
       font-family: 'Inter', sans-serif !important;
       font-weight: 400 !important;
       font-size: 15.5px !important;
       line-height: 1.5 !important;
-      letter-spacing: 0px !important;
-      opacity: 0.78 !important;
+      letter-spacing: 0 !important;
+      opacity: 0.8 !important;
     }
     @media (min-width: 640px) {
-      main p:not(blockquote p) {
+      p, 
+      .body-desc {
         font-size: 17px !important;
-        line-height: 1.5 !important;
+        line-height: 1.45 !important;
       }
     }
     @media (min-width: 1024px) {
-      main p:not(blockquote p) {
+      p, 
+      .body-desc {
         font-size: 18px !important;
         line-height: 1.45 !important;
       }
@@ -90,7 +90,6 @@
     .linear-line {
       border-top: 1px solid #E5E5E5;
     }
-    /* premium animations */
     .fade-up {
       opacity: 0;
       transform: translateY(30px);
@@ -118,27 +117,6 @@
       opacity: 1;
       transform: translateX(0);
     }
-    .stagger-children > * {
-      opacity: 0;
-      transform: translateY(20px);
-      transition: opacity 0.5s ease, transform 0.5s ease;
-    }
-    .stagger-children.visible > *:nth-child(1) { transition-delay: 0.05s; }
-    .stagger-children.visible > *:nth-child(2) { transition-delay: 0.10s; }
-    .stagger-children.visible > *:nth-child(3) { transition-delay: 0.15s; }
-    .stagger-children.visible > *:nth-child(4) { transition-delay: 0.20s; }
-    .stagger-children.visible > *:nth-child(5) { transition-delay: 0.25s; }
-    .stagger-children.visible > * {
-      opacity: 1;
-      transform: translateY(0);
-    }
-    .hover-lift {
-      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease;
-    }
-    .hover-lift:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 20px 40px -12px rgba(15, 31, 92, 0.15);
-    }
     .accent-line {
       width: 40px;
       height: 3px;
@@ -149,13 +127,6 @@
     .group:hover .accent-line {
       width: 60px;
     }
-    .number-glow {
-      transition: color 0.3s ease, transform 0.3s ease;
-    }
-    .group:hover .number-glow {
-      color: #0F1F5C;
-      transform: scale(1.05);
-    }
     .img-hover {
       transition: filter 0.7s ease, transform 0.7s ease;
     }
@@ -163,31 +134,47 @@
       filter: grayscale(0) contrast(1);
       transform: scale(1.01);
     }
-    /* quote mark animation */
-    .quote-mark {
-      display: inline-block;
-      animation: float 3s ease-in-out infinite;
-    }
-    @keyframes float {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-6px); }
-    }
-
-    /* Aeonik Gradient Semi Bold utility */
-    .aeonik-gradient-semi {
-      font-family: 'Aeonik Pro', sans-serif;
-      font-weight: 600;
+    
+    /* 3-Stop Gradient (#0c1334, #27397f, #5ea7db) */
+    .text-gradient-sds {
       background: linear-gradient(135deg, #0c1334 0%, #27397f 50%, #5ea7db 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
+      display: inline-block;
+      padding-bottom: 0.25em;
+    }
+    
+    .footer-gradient {
+      background: linear-gradient(135deg, #0c1334 0%, #27397f 100%);
+      background-size: 200% 200%;
     }
 
-    /* Footer Styles */
-    .footer-gradient {
-        background: linear-gradient(135deg, #0C1334 0%, #27397f 100%);
-        position: relative;
-        overflow: hidden;
+    .footer-line {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: baseline;
+        justify-content: center;
         width: 100%;
+        margin: 0;
+        font-size: clamp(1.15rem, 3.8vw, 3.2rem);
+    }
+    @media (min-width: 768px) {
+        .footer-line {
+            flex-wrap: nowrap;
+            white-space: nowrap;
+        }
+    }
+    .footer-sans-regular {
+        font-family: 'Inter', sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        color: #fff;
+    }
+    .footer-playfair-bold-italic {
+        font-family: 'Playfair Display', serif;
+        font-style: italic;
+        font-weight: 700;
+        color: #fff;
     }
   </style>
 </head>
@@ -219,18 +206,18 @@
     <!-- Header / Summary Section -->
     <section class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start fade-up" id="section-header">
       <div class="lg:col-span-3 pt-2">
-        <span class="text-xs font-mono font-bold tracking-widest uppercase text-brand-navy/60 border-b border-brand-navy/20 pb-1">PERSPECTIVE</span>
+        <span class="text-xs font-mono font-bold tracking-widest uppercase text-brand-navy/60 border-b border-brand-navy/20 pb-1">INSIGHT</span>
       </div>
       <div class="lg:col-span-9 space-y-8">
         <h1 class="font-head font-bold text-4xl sm:text-5xl lg:text-6xl tracking-tight text-editorial-text leading-[1.08]">
-          AI-Assisted Design: Where It Helps and Where It Hurts Your Brand
+          Why Renewable Energy Companies With Strong Projects Still Look Invisible Online
         </h1>
         <div class="space-y-6 text-editorial-muted leading-[1.8] font-sans pt-2">
           <p class="text-editorial-text font-normal">
-            AI tools have become part of nearly every design workflow, including ours. Used well, they save real time. Used carelessly, they quietly flatten a brand until it looks like everyone else's. The difference is not the tool. It is where you let it make decisions.
+            There's a strange pattern that shows up again and again in India's renewable energy sector. A company has real projects. Real megawatts installed. Real clients who've trusted them for over a decade. And yet, when someone searches for them online, almost nothing comes up that reflects any of that.
           </p>
           <p class="text-neutral-500">
-            Here is how to think about where AI actually helps and where it starts to hurt.
+            This isn't a business problem. It's a visibility problem, and it's costing renewable energy developers more than most of them realize.
           </p>
         </div>
       </div>
@@ -241,197 +228,166 @@
       <div class="lg:col-span-3"></div>
       <div class="lg:col-span-9">
         <div class="overflow-hidden pb-3">
-          <img src="https://imgh.in/host/swfnvq" 
-               alt="AI Assisted Design Editorial Visual" 
+          <img src="https://imgh.in/host/x3ndgr" 
+               alt="Renewable Energy Infrastructure" 
                class="w-full h-[380px] sm:h-[460px] object-cover grayscale contrast-125 opacity-90 transition-all duration-700 img-hover rounded-[28px]"
                onerror="this.src='https://placehold.co/1600x900/0F1F5C/FFFFFF?text=Sandy+Design+Studio'">
           <div class="mt-3 flex justify-between items-center text-xs font-mono text-neutral-400">
-            <span>AI Systems & Human Judgment</span>
+            <span>Renewable Infrastructure & Digital Authority</span>
             <span>Archive 2026</span>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Pull Quote Block -->
-    <section class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start linear-line pt-16 fade-up" id="section-quote">
-      <div class="lg:col-span-3">
-        <span class="text-4xl aeonik-gradient-semi quote-mark">“</span>
-      </div>
-      <div class="lg:col-span-9 space-y-6">
-        <blockquote class="aeonik-gradient-semi text-2xl sm:text-3xl leading-snug">
-          "The tool moves fast. The taste still has to come from a person."
-        </blockquote>
-        <div class="flex items-center gap-4 pt-2">
-          <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=200&auto=format&fit=crop" 
-               alt="Sandy Design Studio" 
-               class="w-10 h-10 rounded-[28px] object-cover grayscale"
-               onerror="this.src='https://placehold.co/100x100/0F1F5C/FFFFFF?text=SD'">
-          <div>
-            <div class="font-head font-bold text-sm text-editorial-text">Sandy Design Studio</div>
-            <div class="text-xs font-mono text-brand-navy/70 uppercase tracking-wider">Design & Strategy</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Where AI Genuinely Helps Header -->
-    <section class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 pt-16 linear-line slide-left" id="section-helps-header">
+    <!-- Section 01: The Work Is Real -->
+    <section class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start linear-line pt-16 fade-up" id="section-real-work">
       <div class="lg:col-span-3 pt-2">
-        <span class="text-xs font-mono font-bold tracking-widest uppercase text-brand-navy/60 border-b border-brand-navy/20 pb-1">ADVANTAGE</span>
-      </div>
-      <div class="lg:col-span-9">
-        <h2 class="font-head font-bold text-3xl sm:text-4xl tracking-tight text-editorial-text">Where AI Genuinely Helps</h2>
-        <div class="accent-line mt-4"></div>
-      </div>
-    </section>
-
-    <!-- Help 01 -->
-    <section class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start linear-line pt-16 group stagger-children" id="help-01">
-      <div class="lg:col-span-3">
-        <span class="font-head font-bold text-6xl text-neutral-300 tracking-tighter number-glow">01</span>
+        <span class="text-xs font-mono font-bold tracking-widest uppercase text-brand-navy/60 border-b border-brand-navy/20 pb-1">01 / REALITY</span>
       </div>
       <div class="lg:col-span-9 space-y-6">
-        <h3 class="font-head font-bold text-2xl sm:text-3xl text-editorial-text">Speeding Up Repetitive Production Work</h3>
+        <h2 class="font-head font-bold text-2xl sm:text-3xl text-editorial-text">The Work Is Real. The Proof Isn't Public.</h2>
         <div class="space-y-6 text-editorial-muted leading-[1.8] font-sans">
           <p>
-            Resizing assets for different platforms, generating multiple layout variations, or batch editing photos are tasks AI handles well. This is volume work, not judgment work, and offloading it frees up time for the parts of design that actually require a human eye.
+            Most established solar and renewable energy companies have flagship projects worth showcasing. A large housing board installation. A major industrial client. Years of commissioned capacity. But ask where that proof actually lives online, and the answer is often nowhere.
+          </p>
+          <p>
+            No case study page. No project gallery. No documented before and after. The work exists in files, reports, and client folders, not in a place a prospective client, investor, or partner can actually find it.
+          </p>
+          <p class="text-editorial-text font-medium pt-2">
+            Meanwhile, a newer competitor with a fraction of the project history can look more credible online simply because they documented everything from day one.
           </p>
         </div>
       </div>
     </section>
 
-    <!-- Help 02 -->
-    <section class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start linear-line pt-16 group stagger-children" id="help-02">
-      <div class="lg:col-span-3">
-        <span class="font-head font-bold text-6xl text-neutral-300 tracking-tighter number-glow">02</span>
-      </div>
-      <div class="lg:col-span-9 space-y-6">
-        <h3 class="font-head font-bold text-2xl sm:text-3xl text-editorial-text">Early Stage Exploration</h3>
-        <div class="space-y-6 text-editorial-muted leading-[1.8] font-sans">
-          <p>
-            AI tools are useful for quickly generating a wide range of directions to react to. Seeing ten rough concepts in minutes can help clarify what a brand does and does not want, long before real design time is invested.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Help 03 -->
-    <section class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start linear-line pt-16 group stagger-children" id="help-03">
-      <div class="lg:col-span-3">
-        <span class="font-head font-bold text-6xl text-neutral-300 tracking-tighter number-glow">03</span>
-      </div>
-      <div class="lg:col-span-9 space-y-6">
-        <h3 class="font-head font-bold text-2xl sm:text-3xl text-editorial-text">Editing and Motion Work</h3>
-        <div class="space-y-6 text-editorial-muted leading-[1.8] font-sans">
-          <p>
-            AI-assisted editing can speed up cuts, transitions, and rough motion graphics work significantly, especially for high volume content like social videos, without requiring every second to be manually built from scratch.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Where AI Starts to Hurt Your Brand Header -->
-    <section class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 pt-20 linear-line slide-left" id="section-hurts-header">
+    <!-- Section 02: Visibility Isn't Vanity -->
+    <section class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start linear-line pt-16 fade-up" id="section-visibility-filter">
       <div class="lg:col-span-3 pt-2">
-        <span class="text-xs font-mono font-bold tracking-widest uppercase text-brand-navy/60 border-b border-brand-navy/20 pb-1">RISK</span>
-      </div>
-      <div class="lg:col-span-9">
-        <h2 class="font-head font-bold text-3xl sm:text-4xl tracking-tight text-editorial-text">Where AI Starts to Hurt Your Brand</h2>
-        <div class="accent-line mt-4"></div>
-      </div>
-    </section>
-
-    <!-- Hurt 01 -->
-    <section class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start linear-line pt-16 group stagger-children" id="hurt-01">
-      <div class="lg:col-span-3">
-        <span class="font-head font-bold text-6xl text-neutral-300 tracking-tighter number-glow">01</span>
+        <span class="text-xs font-mono font-bold tracking-widest uppercase text-brand-navy/60 border-b border-brand-navy/20 pb-1">02 / FILTER</span>
       </div>
       <div class="lg:col-span-9 space-y-6">
-        <h3 class="font-head font-bold text-2xl sm:text-3xl text-editorial-text">When It Replaces a Point of View</h3>
+        <h2 class="font-head font-bold text-2xl sm:text-3xl text-editorial-text">Visibility Isn't Vanity. It's the First Filter.</h2>
         <div class="space-y-6 text-editorial-muted leading-[1.8] font-sans">
           <p>
-            AI tools are trained on massive amounts of existing design, which means their default output tends to reflect the average of everything that already exists. A brand that leans entirely on AI output without human direction often ends up looking like a slightly different version of every other AI-generated brand.
+            Before any serious buyer, whether that's a homeowner, a corporate energy buyer, or an investor, picks up the phone, they search. What they find in those first few minutes often decides whether a conversation happens at all.
+          </p>
+          <p>
+            If a company with thirteen years of real projects shows up under five different addresses across directories, split across multiple LinkedIn pages, with a few wrongly categorized listings, it doesn't read as established. It reads as scattered, even when the underlying business is anything but.
+          </p>
+          <p class="text-editorial-text font-medium pt-2">
+            This is the gap that quietly costs renewable energy developers their best leads, not weaker work, but weaker documentation of stronger work.
           </p>
         </div>
       </div>
     </section>
 
-    <!-- Hurt 02 -->
-    <section class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start linear-line pt-16 group stagger-children" id="hurt-02">
-      <div class="lg:col-span-3">
-        <span class="font-head font-bold text-6xl text-neutral-300 tracking-tighter number-glow">02</span>
+    <!-- Gap vs SDS Service Table / Breakdown Section -->
+    <section class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start linear-line pt-20 fade-up" id="section-gaps-table">
+      <div class="lg:col-span-3 pt-2">
+        <span class="text-xs font-mono font-bold tracking-widest uppercase text-brand-navy/60 border-b border-brand-navy/20 pb-1">03 / SOLUTIONS</span>
       </div>
-      <div class="lg:col-span-9 space-y-6">
-        <h3 class="font-head font-bold text-2xl sm:text-3xl text-editorial-text">When It Skips Strategy</h3>
-        <div class="space-y-6 text-editorial-muted leading-[1.8] font-sans">
-          <p>
-            Good design decisions come from understanding a business, its audience, and what makes it different. AI has no access to that context unless a person provides it. Design without that grounding can look polished and still say nothing specific about the business behind it.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Hurt 03 -->
-    <section class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start linear-line pt-16 group stagger-children" id="hurt-03">
-      <div class="lg:col-span-3">
-        <span class="font-head font-bold text-6xl text-neutral-300 tracking-tighter number-glow">03</span>
-      </div>
-      <div class="lg:col-span-9 space-y-6">
-        <h3 class="font-head font-bold text-2xl sm:text-3xl text-editorial-text">When Consistency Breaks Down</h3>
-        <div class="space-y-6 text-editorial-muted leading-[1.8] font-sans">
-          <p>
-            AI-generated assets can vary subtly from one output to the next, even with the same prompt. Without a human maintaining a consistent system, a brand can end up with visuals that are individually fine but collectively inconsistent.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Hurt 04 -->
-    <section class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start linear-line pt-16 group stagger-children" id="hurt-04">
-      <div class="lg:col-span-3">
-        <span class="font-head font-bold text-6xl text-neutral-300 tracking-tighter number-glow">04</span>
-      </div>
-      <div class="lg:col-span-9 space-y-6">
-        <h3 class="font-head font-bold text-2xl sm:text-3xl text-editorial-text">When It's Used to Avoid Decisions</h3>
-        <div class="space-y-6 text-editorial-muted leading-[1.8] font-sans">
-          <p>
-            There is a difference between using AI to explore options and using it to avoid making a real creative decision. The first speeds up good work. The second produces generic work faster.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- The Real Skill Now Section -->
-    <section class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start linear-line pt-20 fade-up" id="section-direction">
-      <div class="lg:col-span-3 pt-2"></div>
       <div class="lg:col-span-9 space-y-8">
-        <h2 class="font-head font-bold text-3xl sm:text-4xl text-editorial-text">The Real Skill Now Is Direction, Not Avoidance</h2>
+        <h2 class="font-head font-bold text-3xl sm:text-4xl text-editorial-text">What Most Renewable Energy Companies Aren't Doing, and What Closes the Gap</h2>
+        <p class="text-editorial-muted font-sans">
+          Every one of these gaps has a specific, fixable cause. Here's what's usually missing, and the exact work that closes it.
+        </p>
+
+        <!-- Responsive Table -->
+        <div class="overflow-x-auto pt-4">
+          <table class="w-full text-left border-collapse">
+            <thead>
+              <tr class="border-b border-neutral-300 font-mono text-xs uppercase tracking-wider text-neutral-500">
+                <th class="py-4 pr-4">What's Usually Missing</th>
+                <th class="py-4 pr-4">Why It Costs You Leads</th>
+                <th class="py-4 pl-4 text-brand-navy font-bold">The SDS Service That Fixes It</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-neutral-200 font-sans">
+              <tr>
+                <td class="py-4 pr-4 text-editorial-text font-medium">No clear positioning or point of difference</td>
+                <td class="py-4 pr-4 text-editorial-muted">Buyers can't tell you apart from competitors with similar project histories.</td>
+                <td class="py-4 pl-4 text-brand-navy font-medium">Brand strategy, positioning, and competitive analysis</td>
+              </tr>
+              <tr>
+                <td class="py-4 pr-4 text-editorial-text font-medium">No documented project proof or case studies</td>
+                <td class="py-4 pr-4 text-editorial-muted">Real work stays invisible to the people deciding whether to trust you.</td>
+                <td class="py-4 pl-4 text-brand-navy font-medium">Brand Storytelling and Content Strategy (Authority Content)</td>
+              </tr>
+              <tr>
+                <td class="py-4 pr-4 text-editorial-text font-medium">Inconsistent identity across directories, LinkedIn, and the website</td>
+                <td class="py-4 pr-4 text-editorial-muted">A strong company reads as scattered or unestablished.</td>
+                <td class="py-4 pl-4 text-brand-navy font-medium">Brand Identity: one consistent visual and naming system across every listing</td>
+              </tr>
+              <tr>
+                <td class="py-4 pr-4 text-editorial-text font-medium">Scattered or duplicate business listings</td>
+                <td class="py-4 pr-4 text-editorial-muted">Search results actively work against you instead of for you.</td>
+                <td class="py-4 pl-4 text-brand-navy font-medium">Platform building</td>
+              </tr>
+              <tr>
+                <td class="py-4 pr-4 text-editorial-text font-medium">No real footage of completed projects or teams</td>
+                <td class="py-4 pr-4 text-editorial-muted">Claims of expertise have no visual backing them up.</td>
+                <td class="py-4 pl-4 text-brand-navy font-medium">Video production, capturing real projects, sites, and teams</td>
+              </tr>
+              <tr>
+                <td class="py-4 pr-4 text-editorial-text font-medium">Existing footage that looks unpolished or inconsistent</td>
+                <td class="py-4 pr-4 text-editorial-muted">Even good projects can look unconvincing on screen.</td>
+                <td class="py-4 pl-4 text-brand-navy font-medium">Good post-production</td>
+              </tr>
+              <tr>
+                <td class="py-4 pr-4 text-editorial-text font-medium">Active social presence with no strategy behind it</td>
+                <td class="py-4 pr-4 text-editorial-muted">Activity without a message doesn't build trust or recall.</td>
+                <td class="py-4 pl-4 text-brand-navy font-medium">Content Strategy</td>
+              </tr>
+              <tr>
+                <td class="py-4 pr-4 text-editorial-text font-medium">No consistent lead flow from digital presence</td>
+                <td class="py-4 pr-4 text-editorial-muted">Visibility exists but never converts into inquiries.</td>
+                <td class="py-4 pl-4 text-brand-navy font-medium">Growth Marketing (Lead generation campaigns)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why This Matters More in a Competitive Market -->
+    <section class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start linear-line pt-20 fade-up" id="section-competitive-market">
+      <div class="lg:col-span-3 pt-2"></div>
+      <div class="lg:col-span-9 space-y-6">
+        <h2 class="font-head font-bold text-3xl sm:text-4xl text-editorial-text">Why This Matters More in a Competitive Market</h2>
         <div class="space-y-6 text-editorial-muted leading-[1.8] font-sans">
+          <p>
+            As more capital and more competitors enter the renewable energy space, credibility increasingly gets decided online before it gets decided in a meeting room. A company with a smaller project history but stronger visibility can consistently outcompete one with a stronger track record and a weaker digital footprint.
+          </p>
           <p class="text-editorial-text font-medium">
-            The businesses getting the most value from AI in design are not the ones using it the most. They are the ones using it with clear direction, then applying human judgment to shape, edit, and finalize the result.
-          </p>
-          <p class="aeonik-gradient-semi text-2xl sm:text-3xl font-semibold pt-4">
-            "The tool moves fast. The taste still has to come from a person."
+            The businesses that win the next phase of this industry won't just be the ones doing the best work. They'll be the ones whose best work is the easiest to find.
           </p>
         </div>
       </div>
     </section>
 
-    <!-- Studio Philosophy Section -->
-    <section class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start linear-line pt-20 fade-up" id="section-philosophy">
+    <!-- The Actual Fix Is Simpler Than It Looks -->
+    <section class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start linear-line pt-20 fade-up" id="section-conclusion">
       <div class="lg:col-span-3 pt-2"></div>
       <div class="lg:col-span-9 space-y-8">
-        <h2 class="font-head font-bold text-3xl sm:text-4xl text-editorial-text">How We Use It at Sandy Design Studio</h2>
+        <h2 class="font-head font-bold text-3xl sm:text-4xl text-editorial-text">The Actual Fix Is Simpler Than It Looks</h2>
         <div class="space-y-6 text-editorial-muted leading-[1.8] font-sans">
           <p>
-            We use AI where it genuinely speeds up production, particularly in editing and repetitive tasks, while keeping strategy, creative direction, and final decisions in human hands. The goal is never to remove the person from the process. It is to remove the busywork so more time goes toward the parts of a brand that actually require judgment.
+            None of this requires a full rebrand or a massive campaign. It starts with showing up properly on the platforms your audience already uses, making your identity consistent everywhere it appears, and finally putting your real project history somewhere it can actually be found.
           </p>
-          <div class="pt-8 border-t border-neutral-200">
-            <p class="text-editorial-text font-medium text-lg sm:text-xl">
-              Want design that uses AI for speed without losing what makes your brand yours?
-            </p>
-          </div>
+          <p>
+            Most renewable energy companies already have everything worth showing. What's missing isn't the work. It's a system built to make that work visible, and that's exactly where each of the gaps above gets closed.
+          </p>
+          <p class="font-head italic text-2xl sm:text-3xl text-editorial-text pt-6 border-t border-neutral-200" style="font-weight: 700;">
+            If your project history is stronger than your search results suggest, that gap is fixable, and usually faster than expected.
+          </p>
+        </div>
+
+        <!-- Call to Action -->
+        <div class="pt-8 pb-12">
+          <p class="font-head font-bold text-xl sm:text-2xl text-editorial-text mb-6">
+            Ready to make your renewable energy projects visible to the clients and partners who matter?
+          </p>
         </div>
       </div>
     </section>
@@ -439,7 +395,7 @@
   </main>
 
   <!-- FOOTER -->
-  <footer class="w-full text-white pt-16 pb-12 px-5 sm:px-8 md:px-12 lg:px-20 border-t border-white/10 relative z-30 stagger-container footer-gradient">
+  <footer class="w-full text-white pt-16 pb-12 px-6 md:px-16 lg:px-24 border-t border-white/10 relative z-30 stagger-container footer-gradient">
       <div class="max-w-7xl mx-auto flex flex-col gap-8">
           <div class="flex flex-col md:flex-row justify-between text-[14px] leading-relaxed font-normal tracking-wide">
               <div class="flex flex-wrap gap-12 md:gap-16 lg:gap-24">
@@ -466,17 +422,17 @@
           </div>
 
           <div class="flex gap-4 mt-2">
-              <a aria-label="LinkedIn" class="w-10 h-10 bg-white rounded-full flex items-center justify-center hover:bg-gray-200 transition-colors" href="https://www.linkedin.com/company/sandydesignstudio"><i class="fa-brands fa-linkedin-in text-lg text-[#0C1334]"></i></a>
-              <a aria-label="Instagram" class="w-10 h-10 bg-white rounded-full flex items-center justify-center hover:bg-gray-200 transition-colors" href="https://www.instagram.com/sandydesignstudio_"><i class="fa-brands fa-instagram text-lg text-[#0C1334]"></i></a>
-              <a aria-label="Facebook" class="w-10 h-10 bg-white rounded-full flex items-center justify-center hover:bg-gray-200 transition-colors" href="#"><i class="fa-brands fa-facebook-f text-lg text-[#0C1334]"></i></a>
-              <a aria-label="YouTube" class="w-10 h-10 bg-white rounded-full flex items-center justify-center hover:bg-gray-200 transition-colors" href="#"><i class="fa-brands fa-youtube text-lg text-[#0C1334]"></i></a>
+              <a aria-label="LinkedIn" class="w-10 h-10 bg-white rounded-full flex items-center justify-center text-[#0c1334] hover:bg-gray-200 transition-colors micro-hover" href="https://www.linkedin.com/company/sandydesignstudio"><i class="fa-brands fa-linkedin-in text-lg"></i></a>
+              <a aria-label="Instagram" class="w-10 h-10 bg-white rounded-full flex items-center justify-center text-[#0c1334] hover:bg-gray-200 transition-colors micro-hover" href="https://www.instagram.com/sandydesignstudio_"><i class="fa-brands fa-instagram text-lg"></i></a>
+              <a aria-label="Facebook" class="w-10 h-10 bg-white rounded-full flex items-center justify-center text-[#0c1334] hover:bg-gray-200 transition-colors micro-hover" href="#"><i class="fa-brands fa-facebook-f text-lg"></i></a>
+              <a aria-label="YouTube" class="w-10 h-10 bg-white rounded-full flex items-center justify-center text-[#0c1334] hover:bg-gray-200 transition-colors micro-hover" href="#"><i class="fa-brands fa-youtube text-lg"></i></a>
           </div>
 
           <hr class="border-t border-white/20 w-full mt-4 mb-6" />
 
           <!-- Footer statement optimized: 2 lines on mobile, 1 line on tablet/laptop/desktop -->
           <div class="flex-grow flex flex-col items-center justify-center text-center w-full pb-4 sm:pb-8">
-             <h1 class="text-lg sm:text-xl md:text-3xl lg:text-4xl xl:text-[3.2rem] tracking-tight leading-snug sm:whitespace-nowrap">
+             <h1 class="footer-line font-light tracking-tight">
                  <span class="block sm:inline text-white">Where Business Thinking&nbsp;</span>
                  <span class="block sm:inline" style="font-family: 'Playfair Display', serif; font-style: italic; font-weight: 500; letter-spacing: -0.02em; color: #fff;">Becomes Brand expression</span>
              </h1>
@@ -599,9 +555,8 @@
 
   <!-- ========================================================= PAGE FUNCTIONALITY JAVASCRIPT ========================================================= -->
   <script>
-    // Intersection Observer for animations
     document.addEventListener('DOMContentLoaded', function() {
-      const fadeElements = document.querySelectorAll('.fade-up, .scale-in, .slide-left, .stagger-children');
+      const fadeElements = document.querySelectorAll('.fade-up, .scale-in, .slide-left');
       const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
